@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/models/search.screen/search.Screen.dart';
-import 'package:newsapp/shared/combonanst/combonants.dart';
-import 'package:newsapp/shared/cubit/cubit.dart';
-import 'package:newsapp/shared/cubit/status.dart';
+
+import '../models/search.screen/search.Screen.dart';
+import '../shared/combonanst/combonants.dart';
+import '../shared/cubit/cubit.dart';
+import '../shared/cubit/status.dart';
+
+
+
+
 
 
 class NewsAppScreen extends StatelessWidget {
+  const NewsAppScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<Newscubit, AppStatus>(
@@ -15,7 +22,7 @@ class NewsAppScreen extends StatelessWidget {
         var cubit = Newscubit.get(context);
         return Scaffold(
           appBar: AppBar(
-            title: Text(
+            title: const Text(
               'News App',
             ),
             actions: [
@@ -24,7 +31,7 @@ class NewsAppScreen extends StatelessWidget {
                 {
                   Navegato(context , SearchScreen());
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.search,
                 ),
               ),
@@ -33,7 +40,7 @@ class NewsAppScreen extends StatelessWidget {
                 {
                   cubit.onchangeappmode();
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.brightness_4_outlined,
                 ),
               ),

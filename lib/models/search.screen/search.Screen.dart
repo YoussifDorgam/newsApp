@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/shared/combonanst/combonants.dart';
-import 'package:newsapp/shared/cubit/cubit.dart';
-import 'package:newsapp/shared/cubit/status.dart';
+
+import '../../shared/combonanst/combonants.dart';
+import '../../shared/cubit/cubit.dart';
+import '../../shared/cubit/status.dart';
+
 
 class SearchScreen extends StatelessWidget {
   var SeachControlar = TextEditingController();
+
+  SearchScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +38,12 @@ class SearchScreen extends StatelessWidget {
                       labelText: 'Search',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0,),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Colors.white ,
 
                         ),
                       ),
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                          Icons.search,
                         color: Colors.grey,
                       ),

@@ -1,12 +1,12 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/models/busniss/busniss.dart';
-import 'package:newsapp/models/science/science.dart';
-import 'package:newsapp/models/sports/sportsscreen.dart';
-import 'package:newsapp/shared/cubit/status.dart';
-import 'package:newsapp/shared/remote/catch.helper.dart';
-import 'package:newsapp/shared/remote/dio.helper.dart';
+import 'package:friend_is_app/shared/cubit/status.dart';
+import 'package:friend_is_app/shared/remote/catch.helper.dart';
+import 'package:friend_is_app/shared/remote/dio.helper.dart';
+import '../../models/busniss/busniss.dart';
+import '../../models/science/science.dart';
+import '../../models/sports/sportsscreen.dart';
+
 
 class Newscubit extends Cubit<AppStatus> {
   Newscubit() : super(AppInitialState());
@@ -16,17 +16,17 @@ class Newscubit extends Cubit<AppStatus> {
   int currentstate = 0;
 
   List<BottomNavigationBarItem> Bottomitems = [
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(
           Icons.business_outlined,
         ),
         label: 'Business'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(
           Icons.sports,
         ),
         label: 'sports'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(
           Icons.science,
         ),
@@ -42,9 +42,9 @@ class Newscubit extends Cubit<AppStatus> {
   }
 
   List<Widget> Screens = [
-    BusinessScreenn(),
+    BusinesScreen(),
     SportsScreenn(),
-    ScienceScreenn(),
+    ScienceScreen(),
   ];
 
   List<dynamic> busniss = [];

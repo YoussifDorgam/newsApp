@@ -1,7 +1,8 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:newsapp/models/WebScreen/WebScreen.dart';
+
+import '../../models/WebScreen/WebScreen.dart';
+
 
 Widget buildnewsItems(list, context) => InkWell(
       onTap: () {
